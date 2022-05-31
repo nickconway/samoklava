@@ -39,17 +39,20 @@ points:
             column_net: P20
         ring:
           stagger: 1 ky
-          spread: kx
+          spread: 1.1kx
+          rotate: -10
           key:
             column_net: P19
         middle:
           stagger: 0.2 ky
-          spread: kx
+          spread: 1.07kx
+          rotate: -7
           key:
             column_net: P18
         index:
           stagger: -0.2 ky
           spread: kx
+          rotate: -4
           key:
             column_net: P15
         inner:
