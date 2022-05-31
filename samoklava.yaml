@@ -117,9 +117,9 @@ outlines:
           - ref: thumbfan_far_thumb
             shift: [0.5 kx - 0.5px, -0.5 ky - 0.5 py]
           - ref: thumbfan_near_thumb
-            shift: [-0.5 kx + 0.5 px, -0.5 ky - 0.5 py]
+            shift: [-0.5 kx + 0.5 px, 0.5 ky - 0.5 py]
           - ref: matrix_pinky_bottom
-            shift: [0.5 kx - 0.5 py, -0.5 ky - 0.5 py]
+            shift: [0.5 kx - 0.5 py, 0.5 ky - 0.5 py]
           - ref: matrix_pinky_home
           - ref: matrix_inner_home
     patch_inner:
@@ -198,16 +198,6 @@ outlines:
           - ref: thumbfan_far_thumb
             shift: [-0.55 kx, 0]
         radius: 1.05
-    mounting_holes:
-      $extends: outlines.exports.screw_holes
-      bottom_left:
-        radius: 2.05
-      top_right:
-        radius: 2.05
-      palm:
-        radius: 2.05
-      thumb:
-        radius: 2.05
     bottom_outline:
       main:
         type: outline
@@ -234,11 +224,6 @@ outlines:
       main:
         type: outline
         name: base_outline
-      mounting_holes:
-        type: outline
-        # TODO use plated through hole footprints as mounting holes
-        name: mounting_holes
-        operation: subtract
 pcbs:
   top_plate:
     # include JLCJLCJLCJLC text somewhere
