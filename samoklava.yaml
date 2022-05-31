@@ -122,16 +122,6 @@ outlines:
             shift: [0.5 kx - 0.5 py, -0.5 ky - 0.5 py]
           - ref: matrix_pinky_home
           - ref: matrix_inner_home
-    patch_outer:
-      - type: polygon
-        points:
-          - ref: matrix_ring_home
-            shift: [0, 0.4ky]
-          - ref: matrix_ring_bottom
-          - ref: matrix_pinky_bottom
-            shift: [-0.5 (kx + px), 0]
-          - ref: matrix_pinky_home
-            shift: [-0.5 (kx + px), ky]
     patch_inner:
       - type: polygon
         points:
@@ -171,10 +161,6 @@ outlines:
         type: outline
         name: patch_inner
         operation: add
-      patch_outer:
-        type: outline
-        name: patch_outer
-        operation: add
       thumbfan_glue:
         type: outline
         name: thumbfan_glue
@@ -188,12 +174,6 @@ outlines:
         name: controller_area
         operation: add
     screw_holes:
-      top_left:
-        type: circle
-        anchor:
-          - ref: matrix_ring_home
-            shift: [-0.5 kx, 0 ky]
-        radius: 1.05
       bottom_left:
         type: circle
         anchor:
@@ -220,8 +200,6 @@ outlines:
         radius: 1.05
     mounting_holes:
       $extends: outlines.exports.screw_holes
-      top_left:
-        radius: 2.05
       bottom_left:
         radius: 2.05
       top_right:
