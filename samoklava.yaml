@@ -38,7 +38,7 @@ points:
           key:
             column_net: P20
         ring:
-          stagger: 0.7 ky
+          stagger: 1 ky
           spread: kx
           key:
             column_net: P19
@@ -67,7 +67,7 @@ points:
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
-        shift: [-1.5 kx, -1 ky]
+        shift: [-2 kx, -1 ky]
       columns:
         near:
           spread: kx
@@ -443,4 +443,3 @@ pcbs:
           layer: B.SilkS
           text: "samoklava v0.1\\nby soundmonster"
           justify: right mirror
-
