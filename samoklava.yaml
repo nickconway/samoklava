@@ -32,9 +32,18 @@ points:
       #   rotate: 5
       key.padding: ky
       columns:
+        pinky-o:
+          spread: kx
+          rows:
+            top.skip: true
+            bottom.skip: true
+          key:
+            column_net: P21
         pinky:
           stagger: 0 ky
           spread: kx
+          rows:
+            top.skip: true
           key:
             column_net: P20
         ring:
@@ -67,7 +76,7 @@ points:
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
-        shift: [-2 kx, -1 ky]
+        shift: [-2.5 kx, -1 ky]
       columns:
         near:
           spread: kx
@@ -116,12 +125,13 @@ outlines:
     patch_outer:
       - type: polygon
         points:
-          - ref: matrix_ring_top
+          - ref: matrix_ring_home
+            shift: [0, 0.4ky]
           - ref: matrix_ring_bottom
           - ref: matrix_pinky_bottom
             shift: [-0.5 (kx + px), 0]
-          - ref: matrix_pinky_top
-            shift: [-0.5 (kx + px), 0]
+          - ref: matrix_pinky_home
+            shift: [-0.5 (kx + px), ky]
     patch_inner:
       - type: polygon
         points:
